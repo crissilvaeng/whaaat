@@ -7,7 +7,7 @@ import './assets/main.css'
 
 const routes = [
   { path: '/', component: App },
-  { path: '/:q(.*)*', redirect: (to: { params: { q: any } }) => ({ path: '/', query: { q: to.params.q } }) },
+  { path: '/:q(.*)*', redirect: to => ({ path: '/', query: { q: to.params.q } }) },
 ]
 
 const router = createRouter({

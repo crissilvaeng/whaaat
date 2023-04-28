@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { computed, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import nlp from 'compromise'
@@ -9,7 +9,7 @@ const query = computed(() => route.query.q)
 const out = ref('')
 
 watch(query, () => {
-  const doc = nlp(query.value as string)
+  const doc = nlp(query.value)
   out.value = doc.html({
     'mark': '#Verb',
   })
