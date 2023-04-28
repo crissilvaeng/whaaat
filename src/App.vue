@@ -1,12 +1,19 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import nlp from 'compromise'
 
-const sentence = 'We have carefully considered all the available options before making a decision.'
-const doc = nlp(sentence)
-const out = ref(doc.html({
-  'mark': '#Verb',
-}))
+const route = useRoute()
+const query = computed(() => route.query.q)
+
+const out = ref('')
+
+watch(query, () => {
+  const doc = nlp(query.value as string)
+  out.value = doc.html({
+    'mark': '#Verb',
+  })
+})
 </script>
 
 <template>
