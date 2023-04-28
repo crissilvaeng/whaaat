@@ -12,6 +12,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "compromise": "^14.8.2",
     "vue": "^3.2.47"
   },
   "devDependencies": {

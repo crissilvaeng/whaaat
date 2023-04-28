@@ -1,0 +1,10 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: grid;
+    font: 400 145%/1.5 Verdana, sans-serif;
+    place-items: center;
+}
