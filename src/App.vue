@@ -18,7 +18,7 @@ watch(query, () => {
 
 <template>
   <p v-if="query" v-html="out"/>
-  <p v-else>😒</p>
+  <p v-else>(┛ಠДಠ)┛彡┻━┻</p>
 </template>
 
 <style>
