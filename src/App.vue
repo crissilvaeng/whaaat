@@ -17,8 +17,8 @@ watch(query, () => {
 </script>
 
 <template>
-  <main v-html="out">
-  </main>
+  <p v-if="query" v-html="out"/>
+  <p v-else>😒</p>
 </template>
 
 <style>
